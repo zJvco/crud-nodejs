@@ -1,0 +1,1 @@
+Projeto de CRUD com funcionalidades de editar e remover items da lista, feita com MySQL e Node Js
