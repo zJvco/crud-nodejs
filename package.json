@@ -1,0 +1,20 @@
+{
+  "name": "CRUD_App",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "João",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

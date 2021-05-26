@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+
+main {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+.title h1 {
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.error-message-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.error-message {
+    width: 40%;
+    margin: auto;
+    padding: 15px;
+    background-color: #F5B7B1;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.error-message span {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.row-input {
+    margin: 20px 0;
+}
+
+.row-input input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+    padding: 5px;
+}
+
+.row-submit {
+    text-align: center;
+}
+
+.row-submit input {
+    border: none;
+    color: #fff;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    letter-spacing: 2px;
+    background-color: #1ABC9C;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.row-submit input:hover {
+    background-color: #17A589;
+}
+
+section {
+    width: 100%;   
+}
+
+table {
+    width: 100%;
+    max-width: 60%;
+    height: 20%;
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+table tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+table tr th {
+    text-align: start;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    white-space: nowrap;
+    cursor: default;
+}
+
+table tr th:first-child {
+    color: #888;
+}
+
+table tr td {
+    padding: 10px 15px;
+    white-space: nowrap;
+}
+
+table tr td input {
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+table tr td:first-child {
+    color: #888;
+}
+
+table tr td button {
+    z-index: 100;
+    border: none;
+    font-size: 1.2rem;
+    margin: 0 5px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+table tr td button:first-child {
+    color: #1ABC9C;
+}
+
+table tr td button:last-child {
+    color: #E74C3C;
+}
+
+.popup-edit-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.popup-edit-container.show {
+    display: flex;
+}
+
+.content-popup {
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+#edit-form .row-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit-form .row-submit input {
+    margin: 0 10px;
+    flex-basis: 100%;
+}
+
+#edit-form .row-submit input:last-child {
+    background-color: #E74C3C;
+}
+
+#edit-form .row-submit input:last-child:hover {
+    background-color: #CB4335;
+}

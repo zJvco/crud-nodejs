@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="icon/all.min.js"></script>
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>CRUD APP</title>
+</head>
+<body>
+    <main>
+        <div class="title">
+            <h1>CRUD APP</h1>
+            <p>Fill the form to view CRUD APP running.</p>
+        </div>
+        <div class="error-message-container">
+            <% if (typeof(msg) != "undefined" ) { %>
+                <div class="error-message">
+                    <span><%= msg %></span>
+                </div>
+            <% } %>
+        </div>
+        <form action="/" method="POST" class="form-send-data">
+            <div class="row-input">
+                <input type="text" name="name" id="name" placeholder="Name">
+            </div>
+            <div class="row-input">
+                <input type="email" name="email" id="email" placeholder="Email">
+            </div>
+            <div class="row-input">
+                <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+            </div>
+            <div class="row-input">
+                <input type="text" name="title" id="title" placeholder="Title">
+            </div>
+            <div class="row-submit">
+                <input type="submit" value="CREATE">
+            </div>
+        </form>
+    </main>
+    <section>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Title</th>
+                <th>Created</th>
+                <th>Edit | Remove</th>
+            </tr>
+            <% if (typeof(sucess) != "undefined" ) { %>
+                <% for (let i=0; i < data.length; i++) { %>
+                    <tr>
+                        <td><%= data[i].id %></td>
+                        <td><%= data[i].name %></td>
+                        <td><%= data[i].email %></td>
+                        <td><%= data[i].phone %></td>
+                        <td><%= data[i].title %></td>
+                        <td><%= data[i].date %></td>
+                        <td>
+                            <button id="edit"><i class="fas fa-edit"></i></button>
+                            <button id="remove"><i class="far fa-trash-alt"></i></button>
+                        </td>
+                    </tr>
+                <% } %>
+            <% } %>
+        </table>
+    </section>
+    <div class="popup-edit-container">
+        <div class="content-popup">
+            <form action="edit" method="POST" id="edit-form">
+                <div class="row-input">
+                    <input type="text" name="editName" id="editName" placeholder="Name">
+                </div>
+                <div class="row-input">
+                    <input type="email" name="editEmail" id="editEmail" readonly="true" placeholder="Email" style="pointer-events: none;">
+                </div>
+                <div class="row-input">
+                    <input type="tel" name="editPhone" id="editPhone" placeholder="Phone Number">
+                </div>
+                <div class="row-input">
+                    <input type="text" name="editTitle" id="editTitle" placeholder="Title">
+                </div>
+                <div class="row-submit">
+                    <input type="submit" value="EDIT">
+                    <input type="button" value="CANCEL" id="cancelBtn">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
